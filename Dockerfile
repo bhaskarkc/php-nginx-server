@@ -31,12 +31,12 @@ RUN chmod +x /run/entrypoint.sh
 
 WORKDIR /var/www/html
 
-RUN mkdir ./vendor && chown -R nobody.nobody vendor/
-RUN chown -R nobody.nobody /run && \
-  chown -R nobody.nobody /var/lib/nginx && \
-  chown -R nobody.nobody /var/log/nginx
+# RUN mkdir ./vendor && chown -R nobody.nobody vendor/
+# RUN chown -R nobody.nobody /run && \
+#   chown -R nobody.nobody /var/lib/nginx && \
+#   chown -R nobody.nobody /var/log/nginx
 
-USER nobody
+# USER nobody
 
 # Expose nginx http server port
 EXPOSE 3000
